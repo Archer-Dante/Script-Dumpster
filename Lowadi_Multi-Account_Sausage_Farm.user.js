@@ -2,7 +2,7 @@
 // @name        Lowadi Multi-Account Sausage Farm
 // @namespace   LMASF
 // @description Делаем вкусную колбаску
-// @version     1.0
+// @version     1.1
 // @grant       none
 // @match       http://www.lowadi.com/*
 // @match       https://www.lowadi.com/*
@@ -28,7 +28,7 @@ var firstHorseID	=	[				// ID с каких лошадей начинать
 						'Конь 1',
 						'Конь 2',
 						'Конь 3'
-						]
+						];
 
 var pageLifetime	=	30; // количество секунд простоя на странице, прежде чем скрипт выйдет с аккаунта
 
