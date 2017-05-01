@@ -8,7 +8,7 @@
 // @match       https://www.lowadi.com/*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require	https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js
-// @downloadURL https://github.com/Archer-Dante/scriptlands/raw/master/Lowadi_Multi-Account_Sausage_Farm.user.js
+// @downloadURL https://github.com/Haibane-Kira/Script-Dumpster/raw/master/Lowadi_Multi-Account_Sausage_Farm.user.js
 // ==/UserScript==
 
 
