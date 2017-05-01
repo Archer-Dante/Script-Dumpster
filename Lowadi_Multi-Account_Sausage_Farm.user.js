@@ -2,7 +2,7 @@
 // @name        Lowadi Multi-Account Sausage Farm
 // @namespace   LMASF
 // @description Делаем вкусную колбаску
-// @version     1.1
+// @version     1.1.0
 // @grant       none
 // @match       http://www.lowadi.com/*
 // @match       https://www.lowadi.com/*
