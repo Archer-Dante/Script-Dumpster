@@ -14,12 +14,12 @@ var NOQ = 5;
     $J('.discovery_queue_apps h2').append('<span style="margin-left: 10px;" class="btnv6_lightblue_blue btn_medium" id="AutoFarmCard"><span>Get Cards</span></span>');
 	$J('#AutoFarmCard').on('click',function(){
 		ViewList(0);
-		$J('#AutoFarmCard span').text('Wait(0/3)...');
+		$J('#AutoFarmCard span').text('Wait(0/'+NOQ+')...');
 	});
 })();
 
 var ViewList = function(queueNumber){
-	$J('#AutoFarmCard span').text('Wait('+(++queueNumber)+'/3)...');
+	$J('#AutoFarmCard span').text('Wait('+(++queueNumber)+'/'+NOQ+')...');
     jQuery.post('http://store.steampowered.com/explore/generatenewdiscoveryqueue', {sessionid: g_sessionID, queuetype: 0}).done(function(data){
         var requests = [];
         for(var i = 0; i < data.queue.length; i++)
