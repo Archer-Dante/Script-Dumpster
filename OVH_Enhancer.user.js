@@ -39,7 +39,7 @@ if ((location.href).indexOf("/order/get/") > 0) {
     if ($("th.sorting:nth-child(3)").html() != 'Надо') {
       	  console.log("Тип авторизации: Стандартный");
       	  var account = 0;
-        	$('#buttons center').append('<div class="btn" id="hks_forms" style="background:#9e1f1f;width:130px;font-size:0.9em;cursor:default">Сколько аккаунтов?<br><input id="total_accs" type="text" size="14" placeholder="Сколько аккаунтов?" value="' + temp_accs + '"></div>');
+        	$('#buttons center').append('<div class="btn" id="hks_forms" style="background:#9e1f1f;width:130px;font-size:0.9em;cursor:default">Сколько аккаунтов?<br><input id="total_accs" type="text" size="14" placeholder="Число аккаунтов" value="' + temp_accs + '"></div>');
       	  $("th.sorting:nth-child(2)").after('<th title="Количество ключей для фермы" style="width: 0px;font-size:0.1em" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Надо: activate to sort column ascending">Надо</th>');
       	  for (i = 1; i < deals_left; i++) {
         	    $('tbody > tr:nth-child(' + i + ') > td:nth-child(2)').after('<td><center><b></b></center></td>');
@@ -47,7 +47,7 @@ if ((location.href).indexOf("/order/get/") > 0) {
     } else {
      	   console.log("Тип авторизации: Через FLH");
      	   var account = 1;
-     	   $('#buttons center').append('<div class="btn" id="hks_forms" style="background:#9e1f1f;width:130px;font-size:0.9em;;cursor:default"><b>Аккаунт:</b><br>Премиум</div>');
+     	   $('#buttons center').append('<div class="btn" id="hks_forms" style="background:#9e1f1f;width:130px;font-size:0.9em;;cursor:default"><b>Вход произведен</b><br>через FLH</div>');
     }
     
     	$('#tables').before('<span style="font-size:0.8em;left:17%;color:white;position:absolute;z-index:9999;top:3px">[ tweaked by <a href="https://t.me/ArcherDante" style="color:cyan">@ArcherDante</a> ]</span>');
