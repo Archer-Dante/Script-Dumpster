@@ -22,10 +22,10 @@ if ((location.href).indexOf("/order/get/") > 0) {
 // форматирование и считалка для OVH
 //if ((location.href).indexOf("steamkeys.ovh") > 0) {
     console.log("Открыт подходящий URL: " + location.href);
-    var temp_rate = 20,
+    var temp_rate = 15,
         temp_kSell = 100,
         temp_kPrice = 149,
-        temp_accs = 1,
+        temp_accs = 100,
         deals_info = $('#DataTables_Table_0_info').html(),
         deals_text = 'of ',
         deals_pos1 = deals_info.indexOf(deals_text) + deals_text.length,
@@ -35,11 +35,11 @@ if ((location.href).indexOf("/order/get/") > 0) {
    		 $('#buttons center').append('<div class="btn" id="hks_forms" style="background:#9e1f1f;width:130px;font-size:0.9em;cursor:default">Рейт продажи сета<br><input id="sets_rate" type="text" size="14" placeholder="Рейт продажи сета" value="' + temp_rate + '"></div>')
    		 $('#buttons center').append('<div class="btn" id="hks_forms" style="background:#9e1f1f;width:130px;font-size:0.9em;cursor:default">Цена продажи ключа<br><input id="sell_key_price" type="text" size="14" placeholder="Цена продажи ключа" value="' + temp_kSell + '"></div>')
   		  $('#buttons center').append('<div class="btn" id="hks_forms" style="background:#9e1f1f;width:130px;font-size:0.9em;cursor:default">Цена покупки ключа<br><input id="key_price_orignal" type="text" size="14" placeholder="число" value="' + temp_kPrice + '"></div>');
-    		$('#buttons center').append('<div class="btn" id="hks_forms" style="background:#9e1f1f;width:130px;font-size:0.9em;cursor:default">Сколько строк?<br><input id="calc_deals" type="text" size="14" placeholder="Сколько строк?" value="' + deals_left + '"></div>');
+    		$('#buttons center').append('<div class="btn" id="hks_forms" style="background:#9e1f1f;width:130px;font-size:0.9em;cursor:default">Сколько строк?<br><input id="calc_deals" type="text" size="14" placeholder="Позиций" value="' + deals_left + '"></div>');
     if ($("th.sorting:nth-child(3)").html() != 'Надо') {
       	  console.log("Тип авторизации: Стандартный");
       	  var account = 0;
-        	$('#buttons center').append('<div class="btn" id="hks_forms" style="background:#9e1f1f;width:130px;font-size:0.9em;cursor:default">Сколько аккаунтов?<br><input id="total_accs" type="text" size="14" placeholder="Число аккаунтов" value="' + temp_accs + '"></div>');
+        	$('#buttons center').append('<div class="btn" id="hks_forms" style="background:#9e1f1f;width:130px;font-size:0.9em;cursor:default">Число аккаунтов<br><input id="total_accs" type="text" size="14" placeholder="Число аккаунтов" value="' + temp_accs + '"></div>');
       	  $("th.sorting:nth-child(2)").after('<th title="Количество ключей для фермы" style="width: 0px;font-size:0.1em" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Надо: activate to sort column ascending">Надо</th>');
       	  for (i = 1; i < deals_left; i++) {
         	    $('tbody > tr:nth-child(' + i + ') > td:nth-child(2)').after('<td><center><b></b></center></td>');
@@ -88,8 +88,8 @@ $('#hks').click(function() {
            			steam_to_qiwi = Math.round(sell_key_price / std_key_price * 100);
 
 
-           		var interval = setInterval(calculate, 250);
- 		var i = 0;
+           		var interval = setInterval(calculate, 100);
+ 		       var i = 0;
 
        		 function calculate() {
        		 i++;     
