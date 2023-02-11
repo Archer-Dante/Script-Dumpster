@@ -1,0 +1,15 @@
+div.emoticon_popup_content .emoticon_option, div.emoticon_option img.emoticon {
+    width: 40px;
+    height: 40px;
+}
+
+.emoticon_popup_ctn, .emoticon_popup_content, .emoticon_popup, .emoticon_popup_content {
+    width: 610px;
+    height: 300px;
+    max-width:610px;
+    max-height:300px;
+}
+
+.emoticon_popup_ctn {
+    top: 234px;
+}
